@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.weather.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="155.0" prefWidth="268.0" spacing="20.0" style="-fx-background-color: #22795e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weather.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER" textAlignment="CENTER" wrappingWidth="223.13671875">
+      <font>
+         <Font name="System Bold Italic" size="29.0" />
+      </font>
+   </Text>
+   <TextField fx:id="city" alignment="CENTER" prefHeight="38.0" prefWidth="222.0" promptText="ENTER SITY" style="-fx-border-color: red;">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </TextField>
+    <Button fx:id="getWeather" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" styleClass="btn" stylesheets="@weather-style.css" text="Find weather" textOverrun="CENTER_ELLIPSIS">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <HBox prefHeight="41.0" prefWidth="233.0" style="-fx-border-color: red; -fx-border-width: 1;">
+      <children>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+      
+                <Label fx:id="temperatureText" prefHeight="22.0" prefWidth="150.0" textFill="#f71b1b" />
+      </children>
+   </HBox>
 </VBox>
