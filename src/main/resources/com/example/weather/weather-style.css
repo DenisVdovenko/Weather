@@ -1,0 +1,15 @@
+.btn {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c2c2c2;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #c2c2c2;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #c2c2c2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #c2c2c2;
+    background-color: rgba(0, 35, 36, 0.71);
+}
