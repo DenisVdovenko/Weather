@@ -27,7 +27,7 @@ public class HelloController {
         getWeather.setOnAction(actionEvent -> {
             String getUserCity = city.getText().trim();
             if (!getUserCity.equals("")) {
-                String outputData = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&units=metric&appid=97b68037b03f93e3e2665aab919c1627");
+                String outputData = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&units=metric&appid=97b68037b03f93e3e2665aab919c1627");
 
                 if (!outputData.isEmpty()) {
                     JSONObject jsonObject = new JSONObject(outputData);
