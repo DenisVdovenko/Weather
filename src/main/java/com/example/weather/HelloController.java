@@ -4,6 +4,7 @@ package com.example.weather;
         import javafx.scene.control.Button;
         import javafx.scene.control.Label;
         import javafx.scene.control.TextField;
+        import org.json.JSONObject;
 
         import java.io.BufferedReader;
         import java.io.InputStreamReader;
@@ -25,9 +26,17 @@ public class HelloController {
     void initialize() {
         getWeather.setOnAction(actionEvent -> {
             String getUserCity = city.getText().trim();
-            String outputData = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=97b68037b03f93e3e2665aab919c1627");
+            if (!getUserCity.equals("")) {
+                String outputData = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&units=metric&appid=97b68037b03f93e3e2665aab919c1627");
 
-            System.out.println(outputData);
+                if (!outputData.isEmpty()) {
+                    JSONObject jsonObject = new JSONObject(outputData);
+                    System.out.println(outputData);
+                    temperatureText.setText(String.valueOf(jsonObject.getJSONObject("main").getDouble("temp")));
+                } else {
+                    city.setText("City is not found!");
+                }
+            }
         });
     }
 
