@@ -2,7 +2,7 @@ package com.example.weather;
 
         import javafx.fxml.FXML;
         import javafx.scene.control.Button;
-        import javafx.scene.control.Label;
+        import javafx.scene.text.Text;
         import javafx.scene.control.TextField;
         import org.json.JSONObject;
 
@@ -20,7 +20,7 @@ public class HelloController {
     private Button getWeather;
 
     @FXML
-    private Label temperatureText;
+    private Text temperatureText;
 
     @FXML
     void initialize() {

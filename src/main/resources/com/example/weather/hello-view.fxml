@@ -3,44 +3,52 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="155.0" prefWidth="268.0" spacing="20.0" style="-fx-background-color: #22795e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weather.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER" textAlignment="CENTER" wrappingWidth="223.13671875">
-      <font>
-         <Font name="System Bold Italic" size="29.0" />
-      </font>
-   </Text>
-   <TextField fx:id="city" alignment="CENTER" prefHeight="38.0" prefWidth="222.0" promptText="ENTER SITY" style="-fx-border-color: red;">
-      <font>
-         <Font size="18.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="DEFAULT" />
-      </cursor>
-   </TextField>
-    <Button fx:id="getWeather" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" styleClass="btn" stylesheets="@weather-style.css" text="Find weather" textOverrun="CENTER_ELLIPSIS">
-      <font>
-         <Font size="18.0" />
-      </font>
-   </Button>
-   <HBox prefHeight="41.0" prefWidth="233.0" style="-fx-border-color: red; -fx-border-width: 1;">
-      <children>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature">
+<AnchorPane styleClass="background" stylesheets="@weather-style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weather.HelloController">
+   <VBox alignment="CENTER" prefHeight="240.0" prefWidth="240.0" spacing="20.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="WEATHER" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Text>
+      <TextField fx:id="city" alignment="CENTER" prefHeight="38.0" prefWidth="222.0" promptText="ENTER CITY">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="getWeather" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" styleClass="btn" stylesheets="@weather-style.css" text="Find weather" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <HBox prefHeight="30.0" prefWidth="200.0" stylesheets="@weather-style.css">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Temperature: ">
             <font>
                <Font size="18.0" />
             </font>
          </Text>
-      
-                <Label fx:id="temperatureText" prefHeight="22.0" prefWidth="150.0" textFill="#f71b1b" />
-      </children>
-   </HBox>
-</VBox>
+         <Text fx:id="temperatureText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-temp" textAlignment="RIGHT" wrappingWidth="49.0">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text=" °C">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+      </HBox>
+   </VBox>
+</AnchorPane>

@@ -1,4 +1,76 @@
+.background {
+     -fx-background-image: url("background.jpg");
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-fill: black;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-stroke: white;
+    -fx-stroke-width: 1px;
+}
+
+.label-temp {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-fill: #ff0000;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-stroke: white;
+    -fx-stroke-width: 1px;
+}
+
+.label-header {
+	-fx-font-size: 32px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+    -fx-opacity: 1;
+    -fx-stroke: white;
+    -fx-stroke-width: 1px;
+}
 .btn {
-    border:#c2c2c2 solid 1px;
-    background: rgba(0, 35, 36, 0.71);
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 13pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.btn:hover {
+   -fx-background-color: #3a3a3a;
+}
+
+.btn:pressed, .btn:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.btn:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.btn:disabled, .btn:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.btn:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.btn:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
 }
